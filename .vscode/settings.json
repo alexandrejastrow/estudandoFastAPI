@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/__init__.py": true,
+        "**/.venv": true,
+        "**/.pytest_cache": true,
+    },
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": false,
+    "python.linting.flake8Enabled": true
+}

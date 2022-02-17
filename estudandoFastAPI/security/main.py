@@ -4,6 +4,7 @@ from routerSafe import route
 
 app = FastAPI()
 
+
 app.include_router(route)
 
 
