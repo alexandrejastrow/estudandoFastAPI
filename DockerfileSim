@@ -1,0 +1,17 @@
+FROM python:3.10
+
+WORKDIR /estudandoFastAPI
+
+COPY ./requirements.txt /estudandoFastAPI/requirements.txt
+
+RUN pip install --no-cache-dir --upgrade -r /estudandoFastAPI/requirements.txt
+
+COPY ./estudandoFastAPI /estudandoFastAPI/app
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+#Nginx or Traefik, add the option --proxy-headers - CMD ["uvicorn", "app.main:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "80"]
+
+
+#docker build -t app .
+#docker run -d --name nome_container -p 8000:8000 id_container
