@@ -9,7 +9,21 @@ fake_users_db = {
         "hashed_password": "$2b$12$sTTx1EZZW6KV3d3wNKZCQOGbSbDqCL2RNePHGjlkqlWmiZ1nCf/8K",
         "disabled": False,
     },
-    "eu2": {
+    "John": {
+        "username": "eu2",
+        "full_name": "eu2 Chains",
+        "email": "eu2@example.com",
+        "hashed_password": "$2b$12$sTTx1EZZW6KV3d3wNKZCQOGbSbDqCL2RNePHGjlkqlWmiZ1nCf/8K",
+        "disabled": True,
+    },
+    "Doe": {
+        "username": "eu",
+        "full_name": "John Doe",
+        "email": "eu@example.com",
+        "hashed_password": "$2b$12$sTTx1EZZW6KV3d3wNKZCQOGbSbDqCL2RNePHGjlkqlWmiZ1nCf/8K",
+        "disabled": False,
+    },
+    "Chains": {
         "username": "eu2",
         "full_name": "eu2 Chains",
         "email": "eu2@example.com",
