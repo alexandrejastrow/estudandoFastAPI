@@ -126,13 +126,9 @@ venv.bak/
 dmypy.json
 
 # Pyre type checker
-<<<<<<< HEAD
-.pyre/
-=======
 .pyre
 
 
 sql_app.sqlite3
 
 static
->>>>>>> Init

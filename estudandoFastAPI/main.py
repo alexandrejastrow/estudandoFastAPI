@@ -1,5 +1,4 @@
-
-from fastapi import Depends, FastAPI, BackgroundTasks
+from fastapi import Depends, FastAPI, BackgroundTasks, Request
 
 #from fastapi.staticfiles import StaticFiles
 
@@ -119,11 +118,38 @@ use_route_names_as_operation_ids(app)
 
 
 
+@app.get('/it01/{item_it}')
+async def read_rot(item_id: str, req: Request):
+    cli_host = req.client.host
+    return {"client_host": cli_host, "item_id": item_id}
+
+#################################################################
+
+from dataclasses import dataclass, field
+from typing import List
+
+@dataclass
+class It:
+    name: str
+    price: float
+    tags: List[str] = field(default_factory=list)
+
+
+@app.post('/it-class', response_model=It)
+async def cria_it():
+    return {
+        "name": "Island In The Moon",
+        "price": 12.99,
+        "tags": ["breater"],
+    }
+
+
+
 
 import uvicorn
 
 if __name__ == '__main__':
 
-    uvicorn.run("server:app", host="0.0.0.0", port=8000, workers=8, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, workers=8, reload=True)
 
 #
